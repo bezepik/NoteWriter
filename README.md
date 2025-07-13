@@ -1,4 +1,5 @@
 # NoteWriter
+<img width="1082" height="705" alt="image" src="https://github.com/user-attachments/assets/f7d04328-a564-4dce-b42a-a4069928ab59" />
 An open-source notepad made using Python.
 ***
 ## How to download
