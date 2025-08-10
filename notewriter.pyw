@@ -2,13 +2,13 @@ import tkinter as tk
 from tkinter import messagebox
 from tkinter import filedialog
 
-# i hate spelling this font but whatever
+# default font, change it if you wanna
 actualfont = "Bahnschrift"
 # version tag
-nwversion = "1.0rc2 test2"
+nwversion = "1.0 test3"
 
 def aboutbox():
-    messagebox.showinfo("About", "NoteWriter " + nwversion + ", 2022-2025 bezepik");
+    messagebox.showinfo("About", "NoteWriter " + nwversion + ", 2022-25 bezepik");
     
 # things for files
 def opentxt():
@@ -50,6 +50,10 @@ def comicfont():
 
 def bahnfont():
     actualfont = "Bahnschrift"
+    text_area.config(font=(actualfont, "16"))
+
+def timesfont():
+    actualfont = "Times New Roman"
     text_area.config(font=(actualfont, "16"))
 
 def lmode():
@@ -114,6 +118,7 @@ font_menu.add_command(label="Arial", command=arialfont)
 font_menu.add_command(label="Eras Demi ITC", command=erasfont)
 font_menu.add_command(label="Franklin Gothic", command=frankfont)
 font_menu.add_command(label="Comic Sans", command=comicfont)
+font_menu.add_command(label="Times New Roman", command=timesfont)
 
 theme_menu = tk.Menu(menu_bar, tearoff=0, bg="black", fg="white")
 theme_menu.add_command(label="Brightness", command=lmode)
@@ -139,4 +144,3 @@ menu_bar.add_cascade(label="Other", menu=other_menu)
 
 root.mainloop()
 # you can also edit notewriter in notewriter because idfk
-
